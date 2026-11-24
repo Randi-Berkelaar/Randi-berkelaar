@@ -522,7 +522,7 @@ h2 {
 
 @media (hover: hover) {
   .project-card:hover::before {
-    opacity: .9;
+    opacity: .75;
   }
 
   .project-card:hover::after {
