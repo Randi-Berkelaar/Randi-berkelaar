@@ -288,7 +288,7 @@ button {
 .hero h1 {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(54px, 7vw, 108px);
+  font-size: clamp(64px, 7vw, 108px);
   line-height: .98;
 }
 
