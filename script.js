@@ -85,8 +85,12 @@ function updateState() {
   dotsWrap.querySelectorAll('.dot').forEach((d, i) =>
     d.classList.toggle('active', i === active)
   );
-  prevBtn.disabled = carousel.scrollLeft <= 2;
-  nextBtn.disabled = carousel.scrollLeft >= maxScroll - 2;
+  const atStart = carousel.scrollLeft <= 2;
+  const atEnd = carousel.scrollLeft >= maxScroll - 2;
+  prevBtn.disabled = atStart;
+  nextBtn.disabled = atEnd;
+  carousel.classList.toggle('fade-left', !atStart);
+  carousel.classList.toggle('fade-right', !atEnd);
 }
 
 prevBtn.addEventListener('click', () =>
