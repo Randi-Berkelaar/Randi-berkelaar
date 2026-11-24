@@ -5,7 +5,7 @@
 :root {
   --orange-1: #ff8a3d;
   --orange-2: #ff5f0a;
-  --orange: #ff6a13;
+  --orange: #FF6608;
   --orange-soft: #fbd9c4;
 
   --ink: #0b1c1f;
@@ -101,7 +101,7 @@ button {
   font-size: 20px;
   letter-spacing: .01em;
   color: #fff;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
 }
 
@@ -116,7 +116,7 @@ button {
 }
 
 .btn-orange {
-  background: linear-gradient(180deg, var(--orange-1), var(--orange-2));
+  background: linear-gradient(125deg, rgb(255, 158, 97) 0%, rgb(255, 81, 0) 50%, rgb(255, 94, 0) 100%);
   box-shadow: 0 6px 20px rgba(255, 95, 10, .35), inset 0 1px 0 rgba(255, 255, 255, .35);
 }
 
@@ -240,6 +240,18 @@ button {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 860px) {
+  .hero {
+    background-image:
+      linear-gradient(1deg, rgba(4, 20, 26, .55) 0%, rgba(4, 20, 26, .25) 50%, rgba(4, 20, 26, 0) 80%),
+      radial-gradient(ellipse 60% 70% at 15% 35%, rgba(4, 20, 26, .45) 0%, transparent 70%),
+      url("images/mobiel.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 /* zachte overloop naar de achtergrondkleur van de rest van de site */
@@ -396,10 +408,10 @@ h2 {
 .arrow {
   width: 46px;
   height: 46px;
-  border-radius: 6px;
+  border-radius: 8px;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, var(--orange-1), var(--orange-2));
+  background: linear-gradient(125deg, rgb(255, 158, 97) 0%, rgb(255, 81, 0) 50%, rgb(255, 94, 0) 100%);
   box-shadow: 0 6px 16px rgba(255, 95, 10, .3);
   transition: transform .2s, filter .2s, opacity .2s;
 }
@@ -463,7 +475,6 @@ h2 {
   border-radius: var(--radius);
   overflow: hidden;
   scroll-snap-align: start;
-  background: linear-gradient(160deg, #3c6b6a, #0f2a2d);
   isolation: isolate;
 }
 
@@ -481,15 +492,20 @@ h2 {
 }
 
 .project-card:hover img {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .project-card::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(5, 20, 22, .75));
+  background: radial-gradient(150% 45% at 15.5% 100%, rgb(0, 0, 0) 0%, rgb(17, 52, 61) 25%, rgb(98, 125, 130) 49.569%, rgba(206, 214, 212, 0) 75%, rgba(255, 0, 0, 0) 100%);
   z-index: -1;
+  opacity: .75;
+}
+
+.project-card::after:hover {
+  background: radial-gradient(150% 45% at 15.5% 100%, rgb(143, 60, 9) 0%, rgb(209, 97, 10) 25%, rgb(255, 169, 92) 49.569%, rgba(206, 214, 212, 0) 75%, rgba(255, 0, 0, 0) 100%)
 }
 
 .project-info {
@@ -529,7 +545,7 @@ h2 {
 .dot {
   width: 16px;
   height: 16px;
-  border-radius: 3px;
+  border-radius: 4px;
   background: var(--orange-soft);
   transition: background .3s, transform .3s;
 }
@@ -553,9 +569,8 @@ h2 {
 
 .about-photo {
   aspect-ratio: 1 / .68;
-  border-radius: 10px;
+  border-radius: 12px;
   overflow: hidden;
-  background: linear-gradient(160deg, #6f9a9a, #1d4547);
 }
 
 .about-photo img {
@@ -603,6 +618,31 @@ h2 {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 860px) {
+  .dark-zone {
+    position: relative;
+    overflow: hidden;
+    background-image:
+      /* bovenkant: vloeit over in de achtergrondkleur van de site */
+      linear-gradient(180deg,
+        var(--bg-light) 0%,
+        rgba(247, 253, 253, .85) 8%,
+        rgba(247, 253, 253, .35) 22%,
+        rgba(247, 253, 253, 0) 40%),
+      /* onderkant: steeds donkerder richting de footer */
+      linear-gradient(180deg,
+        rgba(4, 20, 26, 0) 35%,
+        rgba(4, 20, 26, .45) 60%,
+        rgba(4, 20, 26, .8) 82%,
+        #030b0e 100%),
+      url("images/mobiel-spiegel.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  }
+}
+
 .dark-zone>* {
   position: relative;
   z-index: 2;
@@ -626,13 +666,13 @@ h2 {
 .contact-form {
   margin: 36px auto 0;
   max-width: 460px;
-  padding: 26px 26px 30px;
+  padding: 24px;
   text-align: left;
   background: rgba(40, 52, 55, 0.51);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, .08);
-  border-radius: 14px;
+  border-radius: 16px;
   box-shadow: 0 30px 60px rgba(0, 0, 0, .25);
 }
 
@@ -654,7 +694,7 @@ h2 {
   color: #fff;
   background: rgba(255, 255, 255, .2);
   border: 1px solid transparent;
-  border-radius: 6px;
+  border-radius: 8px;
   outline: none;
   transition: border-color .25s, background .25s;
 }
@@ -677,7 +717,6 @@ h2 {
 .contact-form .btn {
   display: flex;
   margin: 8px auto 0;
-  padding: 14px 34px;
 }
 
 .form-status {
