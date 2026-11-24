@@ -564,7 +564,16 @@ h2 {
   justify-content: center;
   gap: 14px;
   margin-top: 26px;
+
+
 }
+
+@media (max-width: 600px) {
+  .dots {
+    display: none;
+  }
+}
+
 
 .dot {
   width: 16px;
