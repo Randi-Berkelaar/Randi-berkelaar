@@ -600,6 +600,13 @@ h2 {
   align-items: center;
 }
 
+@media (max-width: 860px) {
+  .about-grid> :first-child {
+    order: 2;
+    /* De foto gaat naar beneden */
+  }
+}
+
 .about-photo {
   aspect-ratio: 1 / .68;
   border-radius: 12px;
