@@ -568,11 +568,11 @@ h2 {
 
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .dots {
     display: none;
   }
-}
+} */
 
 
 .dot {
