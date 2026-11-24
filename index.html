@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randi Berkelaar – Digital designer</title>
+  <meta name="description" content="Randi, vierdejaars CMD-student met een passie voor het ontwerpen van impactvolle, mooie en gebruiksvriendelijke websites en apps.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="top">
+    <a href="#top" class="logo">Randi</a>
+
+    <nav class="nav" id="nav">
+      <a href="#top">Home</a>
+      <a href="#projecten">Projecten</a>
+      <a href="#over-mij">Over mij</a>
+      <a href="#contact" class="btn btn-orange nav-cta-mobile">Neem contact op</a>
+    </nav>
+
+    <a href="#contact" class="btn btn-orange header-cta">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      Neem contact op
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu openen">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <h1 class="reveal">
+            Van idee naar<br>
+            <em>impactvol</em><br>
+            digital interface
+          </h1>
+          <p class="reveal">
+            Hoi ik ben Randi, vierdejaars CMD-student met een passie voor het
+            ontwerpen van impactvolle, mooie gebruiksvriendelijke websites en apps.
+          </p>
+          <div class="hero-buttons reveal">
+            <a href="#contact" class="btn btn-orange">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              Neem contact op
+            </a>
+            <a href="#projecten" class="btn btn-ghost">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>
+              Bekijk mijn werk
+            </a>
+          </div>
+        </div>
+
+        <!-- Gestapelde kaarten rechts -->
+        <div class="hero-stack reveal" aria-hidden="true">
+          <div class="stack-card stack-3"></div>
+          <div class="stack-card stack-2"></div>
+          <div class="stack-card stack-1">
+            <!-- Vervang door je eigen afbeelding -->
+            <img src="images/hero-project.jpg" alt="" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTEN ================= -->
+    <section class="projects" id="projecten">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="reveal">Geselecteerde projecten</h2>
+          <div class="carousel-arrows">
+            <button class="arrow" id="prevBtn" aria-label="Vorige projecten">
+              <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <button class="arrow" id="nextBtn" aria-label="Volgende projecten">
+              <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="carousel" id="carousel">
+
+          <!-- Kopieer een <a class="project-card"> blok om een project toe te voegen -->
+          <a href="#" class="project-card reveal">
+            <img src="images/golden-roast.jpg" alt="The Golden Roast" onerror="this.style.display='none'">
+            <div class="project-info">
+              <span class="tag">Figma · UX/UI</span>
+              <h3>The Golden Roast</h3>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal">
+            <img src="images/dj-toyax.jpg" alt="Dj Toyax" onerror="this.style.display='none'">
+            <div class="project-info">
+              <span class="tag">WordPress · Elementor</span>
+              <h3>Dj Toyax</h3>
+            </div>
+          </a>
+
+          <a href="#" class="project-card reveal">
+            <img src="images/boekenzoeker.jpg" alt="De Boekenzoeker" onerror="this.style.display='none'">
+            <div class="project-info">
+              <span class="tag">Figma · UX/UI</span>
+              <h3>De Boekenzoeker</h3>
+            </div>
+          </a>
+
+          <!-- Extra project zodat de carousel ook op desktop werkt (verwijder of vervang) -->
+          <a href="#" class="project-card reveal">
+            <img src="images/project-4.jpg" alt="Project 4" onerror="this.style.display='none'">
+            <div class="project-info">
+              <span class="tag">Framer · Webdesign</span>
+              <h3>Nieuw project</h3>
+            </div>
+          </a>
+
+        </div>
+
+        <div class="dots" id="dots" role="tablist" aria-label="Carousel paginas"></div>
+      </div>
+    </section>
+
+    <!-- ================= OVER MIJ ================= -->
+    <section class="about" id="over-mij">
+      <div class="container about-grid">
+        <div class="about-photo reveal">
+          <img src="images/randi.jpg" alt="Randi" onerror="this.style.display='none'">
+        </div>
+
+        <div class="about-text reveal">
+          <h2>Digital designer</h2>
+          <p>
+            Hoi ik ben Randi, een 23-jarige vierdejaars CMD-student aan de
+            Hogeschool van Amsterdam. Mijn passie ligt bij het ontwerpen van
+            slimme, visueel aantrekkelijke websites en apps.
+          </p>
+          <p>
+            Ik werk met diverse tools zoals Figma, Framer, Adobe Creative Suite
+            en WordPress Elementor om creatieve en gebruiksvriendelijke
+            ontwerpen te realiseren. Het omzetten van ideeën naar strakke,
+            functionele designs met een sterke focus op UX is wat mij echt
+            motiveert.
+          </p>
+          <a href="#contact" class="btn btn-orange">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            Neem contact op
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT + FOOTER (gedeelde achtergrond) ================= -->
+    <div class="dark-zone">
+
+      <section class="contact" id="contact">
+        <div class="container-narrow">
+          <h2 class="reveal">Design nodig?</h2>
+          <p class="contact-sub reveal">Voor UI/UX projecten stuur een bericht</p>
+
+          <!--
+            GitHub Pages kan geen formulieren verwerken. Maak gratis een formulier op https://formspree.io
+            en vervang hieronder JOUW_ID door je eigen form-ID.
+          -->
+          <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/JOUW_ID" method="POST">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="naam@e-mail.com" required>
+
+            <label for="message">Bericht</label>
+            <textarea id="message" name="message" placeholder="Ik heb een tof design nodig!" required></textarea>
+
+            <button type="submit" class="btn btn-orange">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+              Verzend bericht
+            </button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+        </div>
+      </section>
+
+      <!-- ================= FOOTER ================= -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="footer-left">
+            <a href="#top" class="logo">Randi</a>
+            <!-- Vervang de link door je eigen LinkedIn -->
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="linkedin" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9.5h3V19zM6.5 8.2a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5s-1.8 1.2-1.8 2.4V19h-3V9.5h2.9v1.3c.4-.8 1.400-1.500 2.800-1.500 3 0 3.600 2 3.600 4.600V19z"/></svg>
+            </a>
+          </div>
+
+          <nav class="footer-nav">
+            <a href="#top">Home</a>
+            <a href="#projecten">Projecten</a>
+            <a href="#over-mij">Over mij</a>
+          </nav>
+
+          <p class="footer-made">Gemaakt met passie</p>
+        </div>
+        <p class="copyright">© <span id="year">2026</span> Randi Berkelaar</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
