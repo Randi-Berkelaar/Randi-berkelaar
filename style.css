@@ -320,12 +320,17 @@ button {
 .stack-card {
   position: absolute;
   inset: 0;
-  border-radius: 8px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
 }
 
+.stack-1,
+.stack-2,
+.stack-3 img {
+  border-radius: 12px;
+}
+
+
 .stack-1 {
-  background: linear-gradient(160deg, #1a3a3c, #0b1f22);
   overflow: hidden;
   transform: translateY(40px);
   height: 83%;
@@ -339,19 +344,15 @@ button {
 }
 
 .stack-2 {
-  background: #3a4a4c;
   height: 83%;
   transform: translate(-6px, 2px) rotate(-2.5deg);
   z-index: 2;
-  opacity: .9;
 }
 
 .stack-3 {
-  background: #cfd8d8;
   height: 83%;
   transform: translate(10px, -6px) rotate(4deg);
   z-index: 1;
-  opacity: .85;
 }
 
 @keyframes float {
