@@ -2,6 +2,20 @@
    Randi – portfolio
    ========================================================= */
 
+// ---------- Hero kaarten wisselen ----------
+const stackCards = [...document.querySelectorAll('.stack-card')];
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (stackCards.length > 1 && !reduceMotion) {
+  setInterval(() => {
+    if (document.hidden) return;
+    stackCards.forEach(card => {
+      const pos = Number(card.dataset.pos);
+      card.dataset.pos = (pos - 1 + stackCards.length) % stackCards.length;
+    });
+  }, 3500);
+}
+
 // ---------- Jaartal in footer ----------
 document.getElementById('year').textContent = new Date().getFullYear();
 
