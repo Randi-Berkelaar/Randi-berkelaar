@@ -1022,14 +1022,14 @@ h2 {
   background-position: center;
 }
 
-@media (max-width: 860px) {
+/* @media (max-width: 860px) {
   .project-hero {
     padding-top: 120px;
     background-image:
       linear-gradient(180deg, rgba(4, 20, 26, .65) 0%, rgba(4, 20, 26, .4) 60%, var(--bg-light) 100%),
       url("images/mobiel.png");
   }
-}
+} */
 
 .project-hero-inner {
   position: relative;
