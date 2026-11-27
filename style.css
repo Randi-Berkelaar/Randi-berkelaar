@@ -8,10 +8,10 @@
   --orange-soft: #fbd9c4;
 
   --ink: #1C2628;
-  --ink-soft: #1D2729;
+  --ink-soft: #33454a;
   --teal: #27585a;
   --bg-light: #f7fdfd;
-  --text: #2a3a3d;
+  --text: #33454a;
   --white: #F7FDFF;
 
   --font-display: "Instrument Serif", "Times New Roman", serif;
@@ -693,7 +693,7 @@ h2 {
 }
 
 .contact h2 {
-  color: var(--ink);
+  color: var(--text);
 }
 
 .contact-sub {
@@ -802,7 +802,7 @@ h2 {
 
 .footer-nav {
   display: flex;
-  gap: 36px;
+  gap: 48px;
 }
 
 .footer-nav a {
@@ -1015,21 +1015,12 @@ h2 {
   color: #fff;
   overflow: hidden;
   background-image:
-    linear-gradient(180deg, rgba(4, 20, 26, .65) 0%, rgba(4, 20, 26, .4) 60%, var(--bg-light) 100%),
-    radial-gradient(ellipse 65% 75% at 15% 30%, rgba(4, 20, 26, .55) 0%, transparent 75%),
+    linear-gradient(180deg, rgba(4, 20, 26, .68) 0%, rgba(4, 20, 26, .45) 60%, var(--bg-light) 100%),
+    radial-gradient(ellipse 65% 75% at 15% 30%, rgba(4, 20, 26, .58) 0%, transparent 75%),
     url("images/goldenroast.png");
   background-size: cover;
   background-position: center;
 }
-
-/* @media (max-width: 860px) {
-  .project-hero {
-    padding-top: 120px;
-    background-image:
-      linear-gradient(180deg, rgba(4, 20, 26, .65) 0%, rgba(4, 20, 26, .4) 60%, var(--bg-light) 100%),
-      url("images/mobiel.png");
-  }
-} */
 
 .project-hero-inner {
   position: relative;
@@ -1085,11 +1076,6 @@ h2 {
   line-height: 1;
 }
 
-/* .project-hero h1 em {
-  font-style: italic;
-  color: var(--orange);
-} */
-
 .project-lead {
   margin-top: 24px;
   max-width: 620px;
@@ -1098,25 +1084,36 @@ h2 {
   color: rgba(255, 255, 255, .95);
 }
 
+/* Kerngegevens zonder achtergrondvlak, met iconen */
 .project-specs {
   margin-top: 48px;
-  padding: 24px 28px;
+  padding: 0;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-  background: rgba(28, 38, 40, .62);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-radius: var(--radius);
+  gap: 28px;
 }
 
 .project-specs dt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 13px;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: .06em;
-  color: var(--orange-soft);
-  margin-bottom: 4px;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.project-specs dt svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .project-specs dd {
@@ -1180,45 +1177,7 @@ h2 {
   margin-top: 28px;
 }
 
-/* Proces kaarten */
-.process-cards {
-  margin-top: 28px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.process-card {
-  padding: 24px;
-  background: #fff;
-  border: 1px solid rgba(28, 38, 40, .08);
-  border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(28, 38, 40, .04);
-}
-
-.process-tag {
-  display: inline-block;
-  font-size: 13px;
-  font-style: italic;
-  color: var(--orange);
-  margin-bottom: 8px;
-}
-
-.process-card h3 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: 26px;
-  color: var(--ink);
-  margin-bottom: 8px;
-}
-
-.process-card p {
-  font-size: 15px;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-
-/* Galerij */
+/* Galerij zonder figcaptions */
 .case-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1228,25 +1187,29 @@ h2 {
 .gallery-item {
   border-radius: var(--radius);
   overflow: hidden;
-  background: #fff;
-  border: 1px solid rgba(28, 38, 40, .08);
+  background: var(--ink);
+  box-shadow: 0 14px 36px rgba(28, 38, 40, .08);
 }
 
 .gallery-item img {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  transition: transform .5s ease;
 }
 
-.gallery-item figcaption {
-  padding: 14px 18px;
-  font-size: 14px;
-  color: #4a5e63;
+.gallery-item:hover img {
+  transform: scale(1.03);
 }
 
-/* Volgend project blok in dark-zone */
+/* Volgend project blok met projectfoto */
 .next-project {
   padding: 80px 0 20px;
+}
+
+.next-project h2 {
+  margin-bottom: 16px;
+  font-size: clamp(24px, 3vw, 34px);
 }
 
 .next-label {
@@ -1256,28 +1219,75 @@ h2 {
 }
 
 .next-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  align-items: stretch;
+  overflow: hidden;
+  background: rgba(28, 38, 40, .25);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: var(--radius);
+  color: #fff;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, .25);
+  transition: transform .35s ease, border-color .35s ease, box-shadow .35s ease;
+}
+
+.next-card-media {
+  position: relative;
+  min-height: 210px;
+  overflow: hidden;
+}
+
+.next-card-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.next-card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(28, 38, 40, .05) 0%, rgba(28, 38, 40, .55) 100%);
+  pointer-events: none;
+}
+
+.next-card-body {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   padding: 32px 36px;
-  background: rgba(28, 38, 40, .72);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, .1);
-  border-radius: var(--radius);
-  color: #fff;
-  transition: transform .3s ease, border-color .3s ease;
 }
 
-.next-card h2 {
+.next-card-content h2 {
   color: #fff;
-  margin-top: 4px;
+  margin-top: 2px;
+}
+
+.next-card-content p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, .82);
+  max-width: 480px;
+}
+
+.next-card .arrow {
+  flex-shrink: 0;
 }
 
 .next-card:hover {
   transform: translateY(-4px);
   border-color: var(--orange-1);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, .35);
+}
+
+.next-card:hover .next-card-media img {
+  transform: scale(1.06);
 }
 
 @media (max-width: 960px) {
@@ -1285,19 +1295,41 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .case-grid,
-  .process-cards {
+  .case-grid {
     grid-template-columns: 1fr;
+  }
+
+  .next-card {
+    grid-template-columns: 240px 1fr;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 860px) {
+  .case-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 680px) {
   .project-specs,
   .case-gallery {
     grid-template-columns: 1fr;
   }
 
   .next-card {
+    grid-template-columns: 1fr;
+  }
+
+  .next-card-media {
+    aspect-ratio: 16 / 9;
+    min-height: 0;
+  }
+
+  .next-card-media::after {
+    background: linear-gradient(180deg, rgba(28, 38, 40, 0) 30%, rgba(28, 38, 40, .75) 100%);
+  }
+
+  .next-card-body {
     padding: 24px;
   }
 }
